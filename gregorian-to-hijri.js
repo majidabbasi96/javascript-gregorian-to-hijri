@@ -105,21 +105,41 @@ class HijriDate{
 		//islamic year
 		hijriDateResult[7] = iy; 
 
-		return hijriDateResult;
+		this.lastResult = hijriDateResult;
 	}
 	
 	//Return Date String According to convertGregorianToHijri Result
-	getDateString(hijriDateResult){
-		return this.nameDaysWeek[hijriDateResult[4]] + ", " + hijriDateResult[5] + " " + this.monthNames[hijriDateResult[6]] + " " + hijriDateResult[7];
+	getDateString(){
+		return this.nameDaysWeek[this.lastResult[4]] + ", " + this.lastResult[5] + " " + this.monthNames[this.lastResult[6]] + " " + this.lastResult[7];
 	}
 	
 	//Return Month Name According to convertGregorianToHijri Result
-	getMonth(hijriDateResult){
-		return this.monthNames[hijriDateResult[6]];
+	getMonth(){
+		return this.monthNames[this.lastResult[6]];
 	}
 	
 	//Return Year Name According to convertGregorianToHijri Result
-	getYear(hijriDateResult){
-		return hijriDateResult[7];
+	getYear(){
+		return this.lastResult[7];
+	}
+	
+	//Return Islamic Date Number
+	getIslamicDate(){
+		return this.lastResult[5];
+	}
+	
+	//Return Last Result in Array
+	getlastResult(){
+		/*
+			0 	=>	Day (CE)
+			1	=>	Month (CE)
+			2	=> 	Year (CE)
+			3	=> 	Day number
+			4	=> 	Weekday number
+			5	=>	Islamic date
+			6	=>	Islamic month
+			7	=>	Islamic year
+		*/
+		return this.lastResult;
 	}
 }
