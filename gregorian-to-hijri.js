@@ -16,7 +16,7 @@ class HijriDate{
 	convertGregorianToHijri(year, month, day){
 		let date = new Date();
 		date.setFullYear(year, month, day);
-		console.log(this.adjustment);
+		
 		if(this.adjustment) {
 			let adjustmentMilisecond = 1000 * 60 * 60 * 24 * this.adjustment; 
 			let dateMilisecond = date.getTime() + adjustmentMilisecond;
