@@ -10,9 +10,9 @@
 		<div id="result"></div>
 		<script src="../gregorian-to-hijri.js" ></script>
 		<script language="javascript">
-			let hijriDate = new HijriDate(0);
-			result = hijriDate.convertGregorianToHijri(2017, 11, 21);
-			result = hijriDate.getDateString(result);
+			let hijriDate = new HijriDate(-1);
+			hijriDate.convertGregorianToHijri(2017, 11, 10);
+			result = hijriDate.getMonth();
 			document.getElementById("result").innerHTML = result;
 		</script>
 	</body>
