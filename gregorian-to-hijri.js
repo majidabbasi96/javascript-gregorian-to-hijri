@@ -4,13 +4,18 @@ class HijriDate{
 	constructor(adjustment){
 		this.adjustment = adjustment;
 		this.nameDaysWeek = new Array("Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday");
-		this.monthNames = new Array("Muharram","Safar","Rabi-Al-Awwal","Rabi-Al-Thani", "Jumada-Al-Awwal","Jumada-Al-Thani","Rajab","Shaban ", "Ramadan","Shawwal","Zul-Qa'dah","Zul-Hijjah");
+        this.monthNames = new Array("Muharram","Safar","Rabi-Al-Awwal","Rabi-Al-Thani", "Jumada-Al-Awwal","Jumada-Al-Thani","Rajab","Shaban ", "Ramadan","Shawwal","Zul-Qa'dah","Zul-Hijjah");
 	}
 	
 	//Returns mathematic mod
 	getGmod(n,m){
 		return ((n%m)+m)%m;
 	}
+    
+    //Set CustomMonthName to monthNames
+    setCustomMonthNames(customMonthNames){
+        this.monthNames = customMonthNames;
+    }
 	
 	//Convert Gregorian date to Hijri
 	convertGregorianToHijri(year, month, day){
