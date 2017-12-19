@@ -118,6 +118,11 @@ class HijriDate{
 		return this.nameDaysWeek[this.lastResult[4]] + ", " + this.lastResult[5] + " " + this.monthNames[this.lastResult[6]] + " " + this.lastResult[7];
 	}
 	
+	//Return date array of last convertGregorianToHijri Result
+	getDateArray(){
+		return [this.lastResult[7], this.lastResult[6], this.lastResult[5]];
+	}
+	
 	//Return Month Name According to convertGregorianToHijri Result
 	getMonth(){
 		return this.monthNames[this.lastResult[6]];

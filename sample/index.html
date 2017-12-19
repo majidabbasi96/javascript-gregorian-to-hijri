@@ -13,6 +13,7 @@
 			let hijriDate = new HijriDate(-1);
 			hijriDate.convertGregorianToHijri(2017, 11, 10);
             //hijriDate.setCustomMonthNames(new Array("محرم","صفر","ربيع الاول","ربيع الثاني", "جمادي الاولي","جمادي الثانيه","رجب","شعبان", "رمضان","شوال","ذوالقعده","ذوالحجه"));
+			console.log(hijriDate.getDateArray());
 			result = hijriDate.getMonth();
 			document.getElementById("result").innerHTML = result;
 		</script>
